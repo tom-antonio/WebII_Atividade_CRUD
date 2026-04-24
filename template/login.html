@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Login</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <style>
+            #formulario {
+                max-width: 420px;
+                margin: 60px auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <main class="container">
+                <section id="formulario">
+                <form action="{{ url_for('criar') }}" method="POST">
+                    <h2>Login</h2>
+                    <hr>
+                    <div style="display: flex; flex-direction: column; gap: 10px;"> 
+                        <input type="text" name="usuario" placeholder="Usuário (admin)" required>
+                        <input type="password" name="senha" placeholder="Senha (1234)" required>
+                        <button type="submit" name="acao" value="login" id="botoes">Entrar no Sistema</button>
+                        <a href="{{ url_for('senha') }}">Esqueci a Senha</a>
+                    </div>
+                </form>
+                </section>
+</html>
